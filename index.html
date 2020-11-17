@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <!-- Calculator window -->
+        <div class="budget-calculator-window">
+
+            <!-- Input field -->
+            <form class="input-field" id="add-form">
+
+                <!-- Income or expense option -->
+                <label for="income">Income</label>
+                <input type="radio" id="income" name="inc-or-exp" value="income">
+                <label for="expense">Expense</label>
+                <input type="radio" id="expense" name="inc-or-exp" value="expense">
+
+                <!-- "Description" and "Amount" text inputs -->
+                <input type="text" name="description" id="description" placeholder="Description" autocomplete="off">
+                <input type="text" name="amount" id="amount" placeholder="Amount" autocomplete="off">
+
+                <!-- Add-button -->
+                <button class="add-btn">Add</button>
+
+            </form>
+
+            <!-- List field -->
+            <table class="list-field">
+                <thead>
+                    <tr>
+                        <th class="description-header">Description</th><th class="amount-header">Amount</th>
+                    </tr>
+                </thead>
+                <!-- New table elements will be inserted into <tbody> via app.js -->
+                <tbody id="table-body">
+        
+                </tbody>
+                    <tfoot>
+                        <tr>
+                            <!-- Result amount will be updated via app.js -->
+                            <td class="result-label">Result: </td><td id="result-amount">0</td>
+                        </tr>
+                    </tfoot>
+                </tbody>
+            </table>
+
+            
+            <div class="result-field"></div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
