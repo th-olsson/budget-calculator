@@ -3,57 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Budget calculator</title>
 </head>
 <body>
-
     <main>
-        <!-- Calculator window -->
-        <div class="budget-calculator-window">
 
-            <!-- Input field -->
-            <form class="input-field" id="add-form">
+        <form id="add-form">
+            <!-- Radio inputs: Income & Expense -->
+            <label for="income-radio">Income</label>
+            <input type="radio" name="inc-or-exp" id="income-radio" value="income">
+            <label for="expense-radio">Expense</label>
+            <input type="radio" name="inc-or-exp" id="expense-radio" value="expense">
 
-                <!-- Income or expense option -->
-                <label for="income">Income</label>
-                <input type="radio" id="income" name="inc-or-exp" value="income">
-                <label for="expense">Expense</label>
-                <input type="radio" id="expense" name="inc-or-exp" value="expense">
+            <!-- Text inputs: Description & Amount -->
+            <input type="text" name="description-text" id="description-text" placeholder="Description" autocomplete="off">
+            <input type="text" name="amount-text" id="amount-text" placeholder="Amount" autocomplete="off">
 
-                <!-- "Description" and "Amount" text inputs -->
-                <input type="text" name="description" id="description" placeholder="Description" autocomplete="off">
-                <input type="text" name="amount" id="amount" placeholder="Amount" autocomplete="off">
+            <!-- Add button -->
+            <button id="add-button">Add</button>
+            <button type="button" id="clear-button">Clear</button>
+        </form>
 
-                <!-- Add-button -->
-                <button class="add-btn">Add</button>
-
-            </form>
-
-            <!-- List field -->
-            <table class="list-field">
-                <thead>
-                    <tr>
-                        <th class="description-header">Description</th><th class="amount-header">Amount</th>
-                    </tr>
-                </thead>
-                <!-- New table elements will be inserted into <tbody> via app.js -->
-                <tbody id="table-body">
-        
-                </tbody>
-                    <tfoot>
-                        <tr>
-                            <!-- Result amount will be updated via app.js -->
-                            <td class="result-label">Result: </td><td id="result-amount">0</td>
-                        </tr>
-                    </tfoot>
+        <div class="income-expense-tables-wrapper">
+            <table id="income-table">
+                <thead><th>Income</th></thead>
+                <tbody id="income-table-body">
+                    <!-- New income items will be inserted here via app.js -->
                 </tbody>
             </table>
 
-            
-            <div class="result-field"></div>
+            <table id="expense-table-body">
+                <thead><th>Expenses</th></thead>
+                <tbody>
+                    <!-- New expense items will be inserted here via app.js -->
+                </tbody>
+            </table>
         </div>
-    </main>
 
+        <table id="result-table">
+            <th>Result</th>
+            <tr><td>Total</td><td class="result-amount">0</td></tr>
+        </table>
+
+    </main>
     <script src="app.js"></script>
 </body>
 </html>
