@@ -3,7 +3,7 @@ const DESCRIPTION_INPUT = document.querySelector("#description-text");      //Te
 const AMOUNT_INPUT = document.querySelector("#amount-text");                //Text input: 'Amount'
 
 const INCOME_RADIO = document.querySelector("#income-radio");               //Radio input: 'Income'
-const EXPENSE_RADIO = document.querySelector("#expense-radio");  s           //Radio input: 'Expense'
+const EXPENSE_RADIO = document.querySelector("#expense-radio");             //Radio input: 'Expense'
 
 const INCOME_TABLE_BODY = document.querySelector("#income-table-body");     //'Income' table body
 const EXPENSE_TABLE_BODY = document.querySelector("#expense-table-body");   //'Expense' table body
