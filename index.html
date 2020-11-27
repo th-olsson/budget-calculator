@@ -8,44 +8,58 @@
 </head>
 <body>
     <main>
+        <div class="calculator-wrapper">
+        <h1>Budget calculator</h1>
+            <div class="tables-wrapper">
 
-        <form id="add-form">
-            <!-- Radio inputs: Income & Expense -->
-            <label for="income-radio">Income</label>
-            <input type="radio" name="inc-or-exp" id="income-radio" value="income">
-            <label for="expense-radio">Expense</label>
-            <input type="radio" name="inc-or-exp" id="expense-radio" value="expense">
+                <div class="income-expense-tables-wrapper">
 
-            <!-- Text inputs: Description & Amount -->
-            <input type="text" name="description-text" id="description-text" placeholder="Description" autocomplete="off">
-            <input type="text" name="amount-text" id="amount-text" placeholder="Amount" autocomplete="off">
+                    <table class="income-table">
+                        <thead><th>Income</th></thead>
+                        <tbody id="income-table-body">
+                            <!-- New income items will be inserted here via app.js -->
+                        </tbody>
+                    </table>
 
-            <!-- Add button -->
-            <button id="add-button">Add</button>
-            <button type="button" id="clear-button">Clear</button>
-        </form>
+                    <table class="expense-table">
+                        <thead><th>Expenses</th></thead>
+                        <tbody id="expense-table-body">
+                            <!-- New expense items will be inserted here via app.js -->
+                        </tbody>
+                    </table>
 
-        <div class="income-expense-tables-wrapper">
-            <table id="income-table">
-                <thead><th>Income</th></thead>
-                <tbody id="income-table-body">
-                    <!-- New income items will be inserted here via app.js -->
-                </tbody>
-            </table>
+                </div>
 
-            <table id="expense-table-body">
-                <thead><th>Expenses</th></thead>
-                <tbody>
-                    <!-- New expense items will be inserted here via app.js -->
-                </tbody>
-            </table>
+                <table id="result-table">
+                    <th class="result">Result</th>
+                    <div class="total-wrapper">
+                        <tr class="total-table-row"><td class="total">Total</td><td class="result-amount">0</td></tr>
+                    </div>
+                </table>
+
+            </div>
+
+            <form id="add-form">
+                <!-- Radio inputs: Income & Expense -->
+                <div class="radio-buttons">
+                    <input type="radio" name="inc-or-exp" id="income-radio" value="income">
+                    <label for="income-radio" class="income-radio-label">Income</label>
+                    <input type="radio" name="inc-or-exp" id="expense-radio" value="expense">
+                    <label for="expense-radio" class="expense-radio-label">Expense</label>
+
+                </div>
+                <!-- Text inputs: Description & Amount -->
+                <div class="text-input-wrapper">
+                    <input type="text" name="description-text" id="description-text" placeholder="Description" autocomplete="off">
+                    <input type="text" name="amount-text" id="amount-text" placeholder="Amount" autocomplete="off">
+                </div>
+                <!-- Add button -->
+                <div class="buttons-wrapper">
+                    <button id="add-button">Add</button>
+                    <button type="button" id="clear-button">Clear</button>
+                </div>
+            </form>
         </div>
-
-        <table id="result-table">
-            <th>Result</th>
-            <tr><td>Total</td><td class="result-amount">0</td></tr>
-        </table>
-
     </main>
     <script src="app.js"></script>
 </body>

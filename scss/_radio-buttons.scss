@@ -1,0 +1,29 @@
+//Radio buttons wrapper
+.radio-buttons {
+    display: flex;
+    width: 100%;
+}
+
+//Hide radio buttons to only show label
+#income-radio, #expense-radio {
+    display: none;
+}
+
+.income-radio-label, .expense-radio-label{
+    font-family: "Courier new";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 8vh;
+    &:hover{
+        outline: 2px solid black;
+        outline-offset: -2px;
+    }
+}
+
+//Checked radio buttons
+#income-radio:checked + .income-radio-label, #expense-radio:checked + .expense-radio-label{
+    color: whitesmoke;
+    background-color: black;
+}

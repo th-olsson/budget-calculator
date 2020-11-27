@@ -1,8 +1,263 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .income-amount {
   color: #005AB5;
 }
 
 .expense-amount {
   color: #DC3220;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calculator-wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  background-color: whitesmoke;
+  border: solid 1px black;
+}
+
+.income-expense-tables-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+h1 {
+  background-color: rgba(0, 0, 0, 0.735);
+  color: white;
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.radio-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#income-radio, #expense-radio {
+  display: none;
+}
+
+.income-radio-label, .expense-radio-label {
+  font-family: "Courier new";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 8vh;
+}
+
+.income-radio-label:hover, .expense-radio-label:hover {
+  outline: 2px solid black;
+  outline-offset: -2px;
+}
+
+#income-radio:checked + .income-radio-label, #expense-radio:checked + .expense-radio-label {
+  color: whitesmoke;
+  background-color: black;
+}
+
+.text-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#description-text, #amount-text {
+  height: 8vh;
+  width: 100%;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  border: 1px solid black;
+  outline-offset: -1px;
+}
+
+#description-text:focus, #amount-text:focus {
+  outline: black 2px solid;
+  outline-offset: -2px;
+}
+
+.buttons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 8vh;
+}
+
+#add-button, #clear-button {
+  width: 50%;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  font-size: medium;
+  border: solid black 1px;
+}
+
+#add-button:hover, #clear-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.text-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#description-text, #amount-text {
+  height: 8vh;
+  width: 100%;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  border: 1px solid black;
+  outline-offset: -1px;
+}
+
+#description-text:focus, #amount-text:focus {
+  outline: black 2px solid;
+  outline-offset: -2px;
+}
+
+.tables-wrapper {
+  height: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: monospace;
+  font-size: large;
+}
+
+.result-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.result {
+  text-align: left;
+}
+
+.total-table-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.income-expense-tables-wrapper {
+  width: 100%;
+}
+
+.income-table, .expense-table {
+  display: block;
+  width: 50%;
+  text-align: left;
+  overflow: scroll;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+
+#income-table-body, #expense-table-body {
+  display: block;
+  width: 100%;
+}
+
+.added-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.result-amount {
+  font-size: xx-large;
 }
 /*# sourceMappingURL=main.css.map */

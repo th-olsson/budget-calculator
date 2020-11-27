@@ -95,11 +95,11 @@ CLEAR_BUTTON.addEventListener("click", function(){
 
 //After selecting any radio button, focus on 'Description' text input field
 INCOME_RADIO.addEventListener("click", function(){
-    DESCRIPTION_INPUT.focus();
+    // DESCRIPTION_INPUT.focus();
 });
 
 EXPENSE_RADIO.addEventListener("click", function(){
-    DESCRIPTION_INPUT.focus();
+    // DESCRIPTION_INPUT.focus();
 });
 
 //Function declarations:

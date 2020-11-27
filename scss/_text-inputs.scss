@@ -1,0 +1,21 @@
+.text-input-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+#description-text, #amount-text{
+    height: 8vh;
+    width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    border: 1px solid black;
+    outline-offset: -1px;
+}
+
+#description-text:focus, #amount-text:focus{
+    outline: black 2px solid;
+    outline-offset: -2px;
+}

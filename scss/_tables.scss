@@ -1,0 +1,52 @@
+.tables-wrapper {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: large;
+}
+
+.result-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.result{
+    text-align: left;
+}
+
+.total-table-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.income-expense-tables-wrapper{
+    width: 100%;
+}
+
+.income-table, .expense-table{
+    display: block;             //Display as block to make overflow work
+    width: 50%;
+    text-align: left;
+    overflow: scroll;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+#income-table-body, #expense-table-body{
+    display: block;
+    width: 100%;
+}
+
+.added-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-amount{
+    font-size: xx-large;
+}
