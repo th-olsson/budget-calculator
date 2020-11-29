@@ -17,6 +17,7 @@
     align-items: center;
     width: 50%;
     height: $input-box-height;
+    min-height: $input-box-height--min;
     &:hover{
         outline: 2px solid black;
         outline-offset: -2px;

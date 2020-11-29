@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     height: $input-box-height;
+    min-height: $input-box-height--min;
 }
 
 #add-button, #clear-button{
