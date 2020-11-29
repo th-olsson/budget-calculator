@@ -28,3 +28,9 @@
     color: whitesmoke;
     background-color: black;
 }
+
+//Focused radio buttons
+#income-radio:focus + .income-radio-label, #expense-radio:focus + .expense-radio-label{
+    outline: 1px double white;
+    outline-offset: -2px;
+}
