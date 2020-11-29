@@ -81,7 +81,8 @@ form {
 }
 
 #income-radio, #expense-radio {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 .income-radio-label, .expense-radio-label {
